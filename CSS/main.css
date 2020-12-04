@@ -1,0 +1,61 @@
+.content {
+    background-image: url(/assets/bonrow_casette.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+    height: calc(100vh); /*+content magassága*/
+}
+
+header {
+    position: fixed;
+    width: 100vw;
+    height: 200px;
+}
+
+    nav{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 100px;
+        width: 100%;
+        background-color: black;
+    }
+
+        .logo{
+            height: 100px;
+        }
+
+        .container__nav__checkbox{
+            outline: none;
+            display: none;
+            
+        }
+        
+        .container__nav__label{
+            background-color: white;
+            padding: 20px;
+            grid-column: 3;
+        }
+            .hamburger{
+                height: 20px;
+            }
+
+    
+        .container__nav__content{
+
+           
+             position: absolute;
+            text-align: center;
+            background-color: black;
+            top: 100px;
+            left: 50%;
+            right: -100%;
+            transition: .5s;
+
+            
+        }
+
+        .container__nav__checkbox:checked ~ .container__nav__content{
+          
+            right: 50%;
+        }
+    
